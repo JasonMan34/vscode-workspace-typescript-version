@@ -16,14 +16,19 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
         "reference": "workspace:."\
       },\
       {\
-        "name": "a",\
+        "name": "@my-packages/a",\
         "reference": "workspace:packages/a"\
+      },\
+      {\
+        "name": "@my-packages/b",\
+        "reference": "workspace:packages/b"\
       }\
     ],\
     "enableTopLevelFallback": true,\
     "ignorePatternData": "(^(?:\\\\.yarn\\\\/sdks(?:\\\\/(?!\\\\.{1,2}(?:\\\\/|$))(?:(?:(?!(?:^|\\\\/)\\\\.{1,2}(?:\\\\/|$)).)*?)|$))$)",\
     "fallbackExclusionList": [\
-      ["a", ["workspace:packages/a"]],\
+      ["@my-packages/a", ["workspace:packages/a"]],\
+      ["@my-packages/b", ["workspace:packages/b"]],\
       ["vscode-workspace-typescript-version", ["workspace:."]]\
     ],\
     "fallbackPool": [\
@@ -77,6 +82,30 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
           "linkType": "HARD"\
         }]\
       ]],\
+      ["@my-packages/a", [\
+        ["workspace:packages/a", {\
+          "packageLocation": "./packages/a/",\
+          "packageDependencies": [\
+            ["@my-packages/a", "workspace:packages/a"],\
+            ["@types/node", "npm:18.16.3"],\
+            ["ts-node", "virtual:f2c2866309573111ceea30f7515dc2d985b55af038778230f5ab12313941c3f9cf65631cac9308a0aae0b32ff7fd7d4be477fe1f798662a1e5d6055a78964f2e#npm:10.9.1"],\
+            ["typescript", "patch:typescript@npm%3A4.9.5#~builtin<compat/typescript>::version=4.9.5&hash=23ec76"]\
+          ],\
+          "linkType": "SOFT"\
+        }]\
+      ]],\
+      ["@my-packages/b", [\
+        ["workspace:packages/b", {\
+          "packageLocation": "./packages/b/",\
+          "packageDependencies": [\
+            ["@my-packages/b", "workspace:packages/b"],\
+            ["@types/node", "npm:18.16.3"],\
+            ["ts-node", "virtual:f2c2866309573111ceea30f7515dc2d985b55af038778230f5ab12313941c3f9cf65631cac9308a0aae0b32ff7fd7d4be477fe1f798662a1e5d6055a78964f2e#npm:10.9.1"],\
+            ["typescript", "patch:typescript@npm%3A4.9.5#~builtin<compat/typescript>::version=4.9.5&hash=23ec76"]\
+          ],\
+          "linkType": "SOFT"\
+        }]\
+      ]],\
       ["@tsconfig/node10", [\
         ["npm:1.0.9", {\
           "packageLocation": "./.yarn/cache/@tsconfig-node10-npm-1.0.9-f2e2d20feb-a33ae4dc2a.zip/node_modules/@tsconfig/node10/",\
@@ -120,18 +149,6 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
             ["@types/node", "npm:18.16.3"]\
           ],\
           "linkType": "HARD"\
-        }]\
-      ]],\
-      ["a", [\
-        ["workspace:packages/a", {\
-          "packageLocation": "./packages/a/",\
-          "packageDependencies": [\
-            ["a", "workspace:packages/a"],\
-            ["@types/node", "npm:18.16.3"],\
-            ["ts-node", "virtual:35e422217f15d728de07424fbc5e5e619e18751ada71701500ef0651fa54f526b269bc98b1b4dd47879a20664b56ec9c15c3d41efc47a030f28a3f87ce24b963#npm:10.9.1"],\
-            ["typescript", "patch:typescript@npm%3A4.9.5#~builtin<compat/typescript>::version=4.9.5&hash=23ec76"]\
-          ],\
-          "linkType": "SOFT"\
         }]\
       ]],\
       ["acorn", [\
@@ -196,10 +213,10 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
           ],\
           "linkType": "SOFT"\
         }],\
-        ["virtual:35e422217f15d728de07424fbc5e5e619e18751ada71701500ef0651fa54f526b269bc98b1b4dd47879a20664b56ec9c15c3d41efc47a030f28a3f87ce24b963#npm:10.9.1", {\
-          "packageLocation": "./.yarn/__virtual__/ts-node-virtual-a29bc6c913/0/cache/ts-node-npm-10.9.1-6c268be7f4-090adff130.zip/node_modules/ts-node/",\
+        ["virtual:f2c2866309573111ceea30f7515dc2d985b55af038778230f5ab12313941c3f9cf65631cac9308a0aae0b32ff7fd7d4be477fe1f798662a1e5d6055a78964f2e#npm:10.9.1", {\
+          "packageLocation": "./.yarn/__virtual__/ts-node-virtual-f3d831d9b8/0/cache/ts-node-npm-10.9.1-6c268be7f4-090adff130.zip/node_modules/ts-node/",\
           "packageDependencies": [\
-            ["ts-node", "virtual:35e422217f15d728de07424fbc5e5e619e18751ada71701500ef0651fa54f526b269bc98b1b4dd47879a20664b56ec9c15c3d41efc47a030f28a3f87ce24b963#npm:10.9.1"],\
+            ["ts-node", "virtual:f2c2866309573111ceea30f7515dc2d985b55af038778230f5ab12313941c3f9cf65631cac9308a0aae0b32ff7fd7d4be477fe1f798662a1e5d6055a78964f2e#npm:10.9.1"],\
             ["@cspotcode/source-map-support", "npm:0.8.1"],\
             ["@swc/core", null],\
             ["@swc/wasm", null],\
