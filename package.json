@@ -1,0 +1,11 @@
+{
+  "name": "vscode-workspace-typescript-version",
+  "packageManager": "yarn@3.4.1",
+  "private": true,
+  "workspaces": [
+    "packages/*"
+  ],
+  "devDependencies": {
+    "typescript": "^4.9.4"
+  }
+}

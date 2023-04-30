@@ -1,0 +1,16 @@
+{
+  "folders": [
+    {
+      "name": "Package A",
+      "path": "packages/a"
+    },
+    {
+      "name": "Package B",
+      "path": "packages/b"
+    }
+  ],
+  "settings": {
+    "typescript.tsdk": "Package A/.yarn/sdks/typescript/lib",
+    "typescript.enablePromptUseWorkspaceTsdk": true
+  }
+}

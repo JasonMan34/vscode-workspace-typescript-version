@@ -1,0 +1,1 @@
+# vscode-workspace-typescript-version
