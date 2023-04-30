@@ -22,6 +22,10 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
       {\
         "name": "@my-packages/b",\
         "reference": "workspace:packages/b"\
+      },\
+      {\
+        "name": "@my-packages/nested",\
+        "reference": "workspace:packages/nested/double"\
       }\
     ],\
     "enableTopLevelFallback": true,\
@@ -29,6 +33,7 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
     "fallbackExclusionList": [\
       ["@my-packages/a", ["workspace:packages/a"]],\
       ["@my-packages/b", ["workspace:packages/b"]],\
+      ["@my-packages/nested", ["workspace:packages/nested/double"]],\
       ["vscode-workspace-typescript-version", ["workspace:."]]\
     ],\
     "fallbackPool": [\
@@ -99,6 +104,18 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
           "packageLocation": "./packages/b/",\
           "packageDependencies": [\
             ["@my-packages/b", "workspace:packages/b"],\
+            ["@types/node", "npm:18.16.3"],\
+            ["ts-node", "virtual:f2c2866309573111ceea30f7515dc2d985b55af038778230f5ab12313941c3f9cf65631cac9308a0aae0b32ff7fd7d4be477fe1f798662a1e5d6055a78964f2e#npm:10.9.1"],\
+            ["typescript", "patch:typescript@npm%3A4.9.5#~builtin<compat/typescript>::version=4.9.5&hash=23ec76"]\
+          ],\
+          "linkType": "SOFT"\
+        }]\
+      ]],\
+      ["@my-packages/nested", [\
+        ["workspace:packages/nested/double", {\
+          "packageLocation": "./packages/nested/double/",\
+          "packageDependencies": [\
+            ["@my-packages/nested", "workspace:packages/nested/double"],\
             ["@types/node", "npm:18.16.3"],\
             ["ts-node", "virtual:f2c2866309573111ceea30f7515dc2d985b55af038778230f5ab12313941c3f9cf65631cac9308a0aae0b32ff7fd7d4be477fe1f798662a1e5d6055a78964f2e#npm:10.9.1"],\
             ["typescript", "patch:typescript@npm%3A4.9.5#~builtin<compat/typescript>::version=4.9.5&hash=23ec76"]\

@@ -7,6 +7,10 @@
     {
       "name": "Package B",
       "path": "packages/b"
+    },
+    {
+      "name": "Nested Package",
+      "path": "packages/nested/double"
     }
   ],
   "settings": {
